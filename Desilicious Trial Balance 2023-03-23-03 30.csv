@@ -1,0 +1,26 @@
+﻿Trial Balance
+Desilicious
+As of 2023-03-23
+""
+ACCOUNT NUMBER,ACCOUNTS,DEBIT,CREDIT
+,Assets,,
+,Accounts Receivable,"2,970.00",0.00
+,Cash on Hand,0.00,"10,976.00"
+140,Temp account,935.00,0.00
+,Total Assets,"3,905.00","10,976.00"
+,Liabilities,,
+,GST,0.00,100.00
+,Tax,0.00,"2,868.00"
+,Total Liabilities,0.00,"2,968.00"
+,Equity,,
+,Owner Investment / Drawings - BW,"20,336.20",0.00
+,Profit for all prior years,0.00,"16,747.20"
+,Total Equity,"20,336.20","16,747.20"
+,Income,,
+,Sales,0.00,"3,999.00"
+,Sales Discounts,449.00,0.00
+,Total Income,449.00,"3,999.00"
+,Expenses,,
+,Bank Service Charges,"10,000.00",0.00
+,Total Expenses,"10,000.00",0.00
+,Total for all accounts,"34,690.20","34,690.20"
