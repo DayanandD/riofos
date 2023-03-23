@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 
 <html>
@@ -11,24 +10,30 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
+    
     <body>
 
-        <div class="container-fluid">
-            <div class="container">
+        <div class="container-fluid bg-dark">
+            <div class="container" >
                 <div class="row">
-                    <div id="page-wrap">
+                    <div id="page-wrap" class="bg-light">
 
                         <div id="invoice">
-                            <textarea id="header" style="height:auto;">INVOICE</textarea>
+                            <textarea id="header" class="justify-content-sm-center  h-50">INVOICE</textarea>
                         
                         <div id="identity">
                             <div class="row">
-                                <div class="col-mg-6">
+                                <div class="col">
                                     <h2>Trial Balance</h2>
-                        <h4>Desilicious</h4>
-                        <h6>As of Mar 23, 2023</h6>
+                                    <h4>Desilicious</h4>
+                                    <div>
+                                        <div class="form-group">
+                                          <label for="">As of </label>&nbsp;<span id="demo"></span>
+                                          
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-mg-6">
+                                <div class="col">
                                     <div id="logo">
                                         <img id="image" src="./logo.png" alt="logo" />
                                       </div>
@@ -41,7 +46,7 @@
                         
                         <div style="clear:both"></div>
                         <br><br><br>&nbsp;<br><br>
-                        <table class="table">
+                        <table class="table bg-light">
                             <thead>
                               <tr>
                                 <th colspan="2" class="w-100">ACCOUNTs</th>
@@ -51,94 +56,94 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="bg-light font-weight-bold" colspan="4">Assest</td>
+                                    <td class="bg-secondary font-weight-bold" colspan="4">Assest</td>
                                 </tr>
                               <tr >
                                 <td>Accounts Receivable</td>
                                 <td></td>
-                                <td ><input type="text" class="text-right input" id="ART_c" placeholder="&#8377 0,00,000" oninput="calculate()"></td>
-                                <td ><input type="text" class="text-right input" id="ART_d" placeholder="&#8377 0,00,000" oninput="calculate()"></td>
+                                <td ><input type="text" class="text-right input bg-light" id="ART_c" placeholder="&#8377 0,00,000" oninput="Assets()"></td>
+                                <td ><input type="text" class="text-right input bg-light" id="ART_d" placeholder="&#8377 0,00,000" oninput="Assets_d()"></td>
                               </tr>
                               <tr>
                                 <td>Cash on Hand </td>
                                 <td></td>
-                                <td class="text-right"><input type="text" class="text-right input" id="coh_c" placeholder="&#8377 0,00,000" oninput="calculate()"></td>
-                                <td class="text-right"><input type="text" class="text-right input" id="coh_d" placeholder="&#8377 0,00,000" oninput="calculate()"></td>
+                                <td class="text-right"><input type="text" class="text-right input bg-light" id="coh_c" placeholder="&#8377 0,00,000" oninput="Assets()"></td>
+                                <td class="text-right"><input type="text" class="text-right input bg-light" id="coh_d" placeholder="&#8377 0,00,000" oninput="Assets_d()"></td>
                               </tr>
                               <tr>
                                 <td>Temp account</td>
                                 <td></td>
-                                <td class="text-right"><input type="text" class="text-right input" id="temp_c"  placeholder="&#8377 0,00,000" oninput="calculate()"></td>
-                                <td class="text-right"><input type="text" class="text-right input" id="temp_d"  placeholder="&#8377 0,00,000" oninput="calculate()"></td>
+                                <td class="text-right"><input type="text" class="text-right input bg-light" id="temp_c"  placeholder="&#8377 0,00,000" oninput="Assets()"></td>
+                                <td class="text-right"><input type="text" class="text-right input bg-light" id="temp_d"  placeholder="&#8377 0,00,000" oninput="Assets_d()"></td>
                               </tr>
                               <tr>
                                 <td class="font-weight-bold">Total Assets</td>
                                 <td></td>
-                                <td class="text-right font-weight-bold"><input type="text" class="text-right input" id="ta_c"  placeholder="&#8377 0,00,000"></td>
-                                <td class="text-right font-weight-bold"><input type="text" class="text-right input" id="ta_d"  placeholder="&#8377 0,00,000"></td>
+                                <td class="text-right font-weight-bold"><input type="text" class="text-right input bg-light" id="ta_c"  placeholder="&#8377 0,00,000" oninput="Assets()"></td>
+                                <td class="text-right font-weight-bold"><input type="text" class="text-right input bg-light" id="ta_d"  placeholder="&#8377 0,00,000" oninput="Assets_d()"></td>
                               </tr>
                               <tr>
-                                <td class="bg-light font-weight-bold" colspan="4">Liabilities</td>
+                                <td class="bg-secondary font-weight-bold" colspan="4">Liabilities</td>
                             </tr>
                           <tr >
                             <td>GST</td>
                             <td></td>
-                            <td ><input type="text" class="text-right input" id="liability_c" placeholder="&#8377 0,00,000"></td>
-                            <td ><input type="text" class="text-right input" id="liability_d" placeholder="&#8377 0,00,000"></td>
+                            <td ><input type="text" class="text-right input bg-light" id="gst_c" placeholder="&#8377 0,00,000" oninput="liability()"></td>
+                            <td ><input type="text" class="text-right input bg-light" id="gst_d" placeholder="&#8377 0,00,000" oninput="liability_d()"></td>
                           </tr>
                           <tr>
                             <td>Tax</td>
                             <td></td>
-                            <td class="text-right"><input  class="text-right input" type="text" id="tax_c" placeholder="&#8377 0,00,000"></td>
-                            <td class="text-right"><input type="text" class="text-right input"  id="tax_d" placeholder="&#8377 0,00,000"></td>
+                            <td class="text-right"><input  class="text-right input bg-light" type="text" id="tax_c" placeholder="&#8377 0,00,000" oninput="liability()"></td>
+                            <td class="text-right"><input type="text" class="text-right input bg-light"  id="tax_d" placeholder="&#8377 0,00,000" oninput="liability_d()"></td>
                           </tr>
                           <tr>
                             <td class="font-weight-bold">Total Liabilities</td>
                             <td></td>
-                            <td class="text-right font-weight-bold"><input type="text" class="text-right input" id="tl_c"  placeholder="&#8377 0,00,000"></td>
-                            <td class="text-right font-weight-bold"><input type="text" class="text-right input" id="tl_d"  placeholder="&#8377 0,00,000"></td>
+                            <td class="text-right font-weight-bold"><input type="text" class="text-right input bg-light" id="tl_c"  placeholder="&#8377 0,00,000" oninput="liability()"></td>
+                            <td class="text-right font-weight-bold"><input type="text" class="text-right input bg-light" id="tl_d"  placeholder="&#8377 0,00,000" oninput="liability_d()"></td>
                           </tr>
                           <tr>
-                            <td class="bg-light font-weight-bold" colspan="4">Equity</td>
+                            <td class="bg-secondary font-weight-bold" colspan="4">Equity</td>
                         </tr>
                       <tr >
                         <td>Owner Investment / Drawings - BW </td>
                         <td></td>
-                        <td ><input type="text" class="text-right input" id="bw_c" placeholder="&#8377 0,00,000"></td>
-                        <td ><input type="text" class="text-right input" id="bw_d" placeholder="&#8377 0,00,000"></td>
+                        <td ><input type="text" class="text-right input bg-light" id="bw_c" placeholder="&#8377 0,00,000" oninput="equity()"></td>
+                        <td ><input type="text" class="text-right input bg-light" id="bw_d" placeholder="&#8377 0,00,000" oninput="equity_d()"></td>
                       </tr>
                       <tr>
                         <td>Profit for all prior years </td>
                         <td></td>
-                        <td class="text-right"><input type="text" class="text-right input" id="profit_c" placeholder="&#8377 0,00,000"></td>
-                        <td class="text-right"><input type="text" class="text-right input" id="profit_d" placeholder="&#8377 0,00,000"></td>
+                        <td class="text-right"><input type="text" class="text-right input bg-light" id="profit_c" placeholder="&#8377 0,00,000" oninput="equity()"></td>
+                        <td class="text-right"><input type="text" class="text-right input bg-light" id="profit_d" placeholder="&#8377 0,00,000" oninput="equity_d()"></td>
                       </tr>
                       <tr>
-                        <td class="font-weight-bold font-weight-bold">Total Equity</td>
+                        <td class="font-weight-bold ">Total Equity</td>
                         <td></td>
-                        <td class="text-right"><input type="text" id="te_c" class="text-right input" placeholder="&#8377 0,00,000"></td>
-                        <td class="text-right"><input type="text" id="te_d" class="text-right input" placeholder="&#8377 0,00,000"></td>
+                        <td class="text-right"><input type="text" id="te_c" class="text-right input bg-light" placeholder="&#8377 0,00,000" oninput="equity()"></td>
+                        <td class="text-right"><input type="text" id="te_d" class="text-right input bg-light" placeholder="&#8377 0,00,000" oninput="equity_d()"></td>
                       </tr>
                       <tr>
-                        <td class="bg-light font-weight-bold font-weight-bold" colspan="4">Income</td>
+                        <td class="bg-secondary  font-weight-bold" colspan="4">Income</td>
                     </tr>
                   <tr >
                     <td>Sales</td>
                     <td></td>
-                    <td ><input type="text" class="text-right input" id="sales_c" placeholder="&#8377 0,00,000"></td>
-                    <td ><input type="text" class="text-right input" id="sales_d" placeholder="&#8377 0,00,000"></td>
+                    <td ><input type="text" class="text-right input bg-light" id="sales_c" placeholder="&#8377 0,00,000" oninput="income()"></td>
+                    <td ><input type="text" class="text-right input bg-light" id="sales_d" placeholder="&#8377 0,00,000" oninput="income_d()"></td>
                   </tr>
                   <tr>
                     <td>Sales Discount</td>
                     <td></td>
-                    <td class="text-right"><input type="text" id="sd_c" class="text-right input" placeholder="&#8377 0,00,000"></td>
-                    <td class="text-right"><input type="text" id="sd_d" class="text-right input" placeholder="&#8377 0,00,000"></td>
+                    <td class="text-right"><input type="text" id="sd_c" class="text-right input bg-light" placeholder="&#8377 0,00,000" oninput="income()"></td>
+                    <td class="text-right"><input type="text" id="sd_d" class="text-right input bg-light" placeholder="&#8377 0,00,000" oninput="income_d()"></td>
                   </tr>
                   <tr>
                     <td class="font-weight-bold">Total Income</td>
                     <td></td>
-                    <td class="text-right"><input type="text" id="ti_c" class="text-right input" placeholder="&#8377 0,00,000"></td>
-                    <td class="text-right"><input type="text" id="ti_d" class="text-right input" placeholder="&#8377 0,00,000"></td>
+                    <td class="text-right"><input type="text" id="ti_c" class="text-right input bg-light" placeholder="&#8377 0,00,000" oninput="income()"></td>
+                    <td class="text-right"><input type="text" id="ti_d" class="text-right input bg-light" placeholder="&#8377 0,00,000" oninput="income_d()"></td>
                   </tr>
                   <tr visibility="hidden">
                     <td></td>
@@ -147,29 +152,29 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td class="bg-light font-weight-bold" colspan="4">Expenses</td>
+                    <td class="bg-secondary font-weight-bold" colspan="4">Expenses</td>
                 </tr>
               <tr >
                 <td>Bank Service Charges</td>
                 <td></td>
-                <td ><input type="text" class="text-right input" id="bsc_c" placeholder="&#8377 0,00,000"></td>
-                <td ><input type="text" class="text-right input" id="bsc_d" placeholder="&#8377 0,00,000"></td>
+                <td ><input type="text" class="text-right input bg-light" id="bsc_c" placeholder="&#8377 0,00,000" expences oninput="expences()"></td>
+                <td ><input type="text" class="text-right input bg-light" id="bsc_d" placeholder="&#8377 0,00,000" expences oninput="expences_d()"></td>
               </tr>
               <tr>
-                <td style="font-weight: bold;">Total Expenses</td>
+                <td class="font-weight-bold">Total Expenses</td>
                 <td></td>
-                <td class="text-right"><input type="text" class="text-right input" id="total_ex_c" placeholder="&#8377 0,00,000"></td>
-                <td class="text-right"><input type="text" class="text-right input" id="total_ex_d" placeholder="&#8377 0,00,000"></td>
+                <td class="text-right"><input type="text" class="text-right input bg-light" id="total_ex_c" placeholder="&#8377 0,00,000" oninput="expences()"></td>
+                <td class="text-right"><input type="text" class="text-right input bg-light" id="total_ex_d" placeholder="&#8377 0,00,000" oninput="expences_d()"></td>
               </tr>
               <tr>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
-                <td style="font-weight: bold;">Total for all accounts</td>
+                <td class="font-weight-bold">Total for all accounts</td>
                 <td></td>
-                <td class="text-right"><input type="text" class="text-right input" id="total_c" placeholder="&#8377 0,00,000"></td>
-                <td class="text-right"><input type="text" class="text-right input" id="total_d" placeholder="&#8377 0,00,000"></td>
+                <td class="text-right"><input type="text" class="text-right input bg-light" id="total_c" placeholder="&#8377 0,00,000" oninput="toal()"></td>
+                <td class="text-right"><input type="text" class="text-right input bg-light" id="total_d" placeholder="&#8377 0,00,000" oninput="total_d()"></td>
               </tr>
                             </tbody>
                           </table>
@@ -180,7 +185,9 @@
                        
                 </div>
             </div>
-            <button id="button" >Generate PDF</button>
+            <button class="btn btn-success" id="button" >Generate PDF</button>
+            <button class="btn btn-warning" type="reset"  value="Reset">Reset</button>
+            <button class="btn btn-danger" >Cancel</button>
             </div>
             </div>
         </div>
@@ -196,222 +203,109 @@
         const element = document.getElementById("invoice");
         html2pdf().from(element).save();
        });
-       function calculate() {
-  var x = document.getElementById('ART_c').value;
-  var y = document.getElementById('coh_c').value;
-  var z = document.getElementById('temp_c').value;
+       function Assets() {
+  var a = document.getElementById('ART_c').value;
+  var b = document.getElementById('coh_c').value;
+  var c = document.getElementById('temp_c').value;
+  
   var ta_c = document.getElementById('ta_c');
-  var myResult = parseInt(x) + parseInt(y)+parseInt(z);
+  var myResult = parseInt(a) + parseInt(b)+parseInt(c);
   ta_c.value = myResult;
-
 }
-      
+
+function Assets_d() {
+  var z = document.getElementById('ART_d').value;
+  var x = document.getElementById('coh_d').value;
+  var y = document.getElementById('temp_d').value;
+  
+  var ta_d = document.getElementById('ta_d');
+  var myResult_d = parseInt(z) + parseInt(x)+parseInt(y);
+  ta_d.value = myResult_d;
+}
+
+function liability() {
+    var d = document.getElementById('gst_c').value;
+  var e = document.getElementById('tax_c').value;
+  var tl_c = document.getElementById('tl_c');
+  var total_liability = parseInt(d) + parseInt(e);
+  tl_c.value = total_liability;
+}
+
+function liability_d() {
+    var p = document.getElementById('gst_d').value;
+  var q = document.getElementById('tax_d').value;
+  var tl_d = document.getElementById('tl_d');
+  var total_liability_d = parseInt(p) + parseInt(q);
+  tl_d.value = total_liability_d;
+}
+
+
+
+function equity(){
+    var f = document.getElementById('bw_c').value;
+  var g = document.getElementById('profit_c').value;
+
+  var te_c = document.getElementById('te_c');
+  var total_equity = parseInt(f) + parseInt(g);
+  te_c.value = total_equity;
+}
+
+function equity_d(){
+    var r = document.getElementById('bw_d').value;
+  var s = document.getElementById('profit_d').value;
+
+  var te_d = document.getElementById('te_d');
+  var total_equity_d = parseInt(r) + parseInt(s);
+  te_d.value = total_equity_d;
+}
+
+function income(){
+    var h = document.getElementById('sales_c').value;
+  var i = document.getElementById('sd_c').value;
+  var ti_c = document.getElementById('ti_c');
+  var total_income = parseInt(h) + parseInt(i);
+  ti_c.value = total_income;
+  
+}
+
+function income_d(){
+    var t = document.getElementById('sales_d').value;
+  var u = document.getElementById('sd_d').value;
+  var ti_d = document.getElementById('ti_d');
+  var total_income_d = parseInt(t) + parseInt(u);
+  ti_d.value = total_income_d;
+  
+}
+
+
+
+function expences(){
+    const k = 0;
+  var j = document.getElementById('bs_c').value;
+  var total_ex_c = document.getElementById('total_ex_c');
+  var total_expences = parseInt(j) ;
+  total_ex_c.value = total_expences;
+}
+
+function expences_d(){
+    const v = 0;
+  var w = document.getElementById('bs_d').value;
+  var total_ex_d = document.getElementById('total_ex_d');
+  var total_expences_d = parseInt(v) + parseInt(w);
+  total_ex_d.value = total_expences_d;
+}
+function total(){
+    var cc = document.getElementById('te_c');
+    var bb = document.getElementById('ti_c').value;
+    var aa = document.getElementById('total_ex_c');
+    var total_c = document.getElementById('total_c');
+    var total_result_c = parseInt(total_income) + parseInt(total_expences);
+    total_c.value = total_result_c;
+}
+const d = new Date("2022-03-25");
+    document.getElementById("demo").innerHTML = d;
     
         </script>
 
     </body>
-=======
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div id="page-wrap">
-
-                        <div id="invoice">
-                            <textarea id="header" style="height:auto;">INVOICE</textarea>
-                        
-                        <div id="identity">
-                            <div class="row">
-                                <div class="col-mg-6">
-                                    <h2>Trial Balance</h2>
-                        <h4>Desilicious</h4>
-                        <h6>As of Mar 23, 2023</h6>
-                                </div>
-                                <div class="col-mg-6">
-                                    <div id="logo">
-                                        <img id="image" src="./logo.png" alt="logo" />
-                                      </div>
-                                </div>
-                            </div>
-                        
-                            
-                        
-                        </div>
-                        
-                        <div style="clear:both"></div>
-                        <br><br><br>&nbsp;<br><br>
-                        <table class="table">
-                            <thead>
-                              <tr>
-                                <th colspan="2" class="w-100">ACCOUNTs</th>
-                                <th class="text-right">DEBIT</th>
-                                <th class="text-right">CREDIT</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="bg-light font-weight-bold" colspan="4">Assest</td>
-                                </tr>
-                              <tr >
-                                <td>Accounts Receivable</td>
-                                <td></td>
-                                <td ><input type="text" class="text-right input" id="ART_c" placeholder="&#8377 0,00,000"></td>
-                                <td ><input type="text" class="text-right input" id="ART_d" placeholder="&#8377 0,00,000"></td>
-                              </tr>
-                              <tr>
-                                <td>Cash on Hand </td>
-                                <td></td>
-                                <td class="text-right"><input type="text" class="text-right input" id="coh_c" placeholder="&#8377 0,00,000"></td>
-                                <td class="text-right"><input type="text" class="text-right input" id="coh_d"    placeholder="&#8377 0,00,000"></td>
-                              </tr>
-                              <tr>
-                                <td>Temp account</td>
-                                <td></td>
-                                <td class="text-right"><input type="text" class="text-right input" id="temp_c"  placeholder="&#8377 0,00,000"></td>
-                                <td class="text-right"><input type="text" class="text-right input" id="temp_d"  placeholder="&#8377 0,00,000"></td>
-                              </tr>
-                              <tr>
-                                <td class="font-weight-bold">Total Assets</td>
-                                <td></td>
-                                <td class="text-right font-weight-bold"><input type="text" class="text-right input" id="ta_c"  placeholder="&#8377 0,00,000"></td>
-                                <td class="text-right font-weight-bold"><input type="text" class="text-right input" id="ta_d"  placeholder="&#8377 0,00,000"></td>
-                              </tr>
-                              <tr>
-                                <td class="bg-light font-weight-bold" colspan="4">Liabilities</td>
-                            </tr>
-                          <tr >
-                            <td>GST</td>
-                            <td></td>
-                            <td ><input type="text" class="text-right input" id="liability_c" placeholder="&#8377 0,00,000"></td>
-                            <td ><input type="text" class="text-right input" id="liability_d" placeholder="&#8377 0,00,000"></td>
-                          </tr>
-                          <tr>
-                            <td>Tax</td>
-                            <td></td>
-                            <td class="text-right"><input  class="text-right input" type="text" id="tax_c" placeholder="&#8377 0,00,000"></td>
-                            <td class="text-right"><input type="text" class="text-right input"  id="tax_d" placeholder="&#8377 0,00,000"></td>
-                          </tr>
-                          <tr>
-                            <td class="font-weight-bold">Total Liabilities</td>
-                            <td></td>
-                            <td class="text-right font-weight-bold"><input type="text" class="text-right input" id="tl_c"  placeholder="&#8377 0,00,000"></td>
-                            <td class="text-right font-weight-bold"><input type="text" class="text-right input" id="tl_d"  placeholder="&#8377 0,00,000"></td>
-                          </tr>
-                          <tr>
-                            <td class="bg-light font-weight-bold" colspan="4">Equity</td>
-                        </tr>
-                      <tr >
-                        <td>Owner Investment / Drawings - BW </td>
-                        <td></td>
-                        <td ><input type="text" class="text-right input" id="bw_c" placeholder="&#8377 0,00,000"></td>
-                        <td ><input type="text" class="text-right input" id="bw_d" placeholder="&#8377 0,00,000"></td>
-                      </tr>
-                      <tr>
-                        <td>Profit for all prior years </td>
-                        <td></td>
-                        <td class="text-right"><input type="text" class="text-right input" id="profit_c" placeholder="&#8377 0,00,000"></td>
-                        <td class="text-right"><input type="text" class="text-right input" id="profit_d" placeholder="&#8377 0,00,000"></td>
-                      </tr>
-                      <tr>
-                        <td class="font-weight-bold font-weight-bold">Total Equity</td>
-                        <td></td>
-                        <td class="text-right"><input type="text" id="te_c" class="text-right input" placeholder="&#8377 0,00,000"></td>
-                        <td class="text-right"><input type="text" id="te_d" class="text-right input" placeholder="&#8377 0,00,000"></td>
-                      </tr>
-                      <tr>
-                        <td class="bg-light font-weight-bold font-weight-bold" colspan="4">Income</td>
-                    </tr>
-                  <tr >
-                    <td>Sales</td>
-                    <td></td>
-                    <td ><input type="text" class="text-right input" id="sales_c" placeholder="&#8377 0,00,000"></td>
-                    <td ><input type="text" class="text-right input" id="sales_d" placeholder="&#8377 0,00,000"></td>
-                  </tr>
-                  <tr>
-                    <td>Sales Discount</td>
-                    <td></td>
-                    <td class="text-right"><input type="text" id="sd_c" class="text-right input" placeholder="&#8377 0,00,000"></td>
-                    <td class="text-right"><input type="text" id="sd_d" class="text-right input" placeholder="&#8377 0,00,000"></td>
-                  </tr>
-                  <tr>
-                    <td class="font-weight-bold">Total Income</td>
-                    <td></td>
-                    <td class="text-right"><input type="text" id="ti_c" class="text-right input" placeholder="&#8377 0,00,000"></td>
-                    <td class="text-right"><input type="text" id="ti_d" class="text-right input" placeholder="&#8377 0,00,000"></td>
-                  </tr>
-                  <tr visibility="hidden">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td class="bg-light font-weight-bold" colspan="4">Expenses</td>
-                </tr>
-              <tr >
-                <td>Bank Service Charges</td>
-                <td></td>
-                <td ><input type="text" class="text-right input" id="bsc_c" placeholder="&#8377 0,00,000"></td>
-                <td ><input type="text" class="text-right input" id="bsc_d" placeholder="&#8377 0,00,000"></td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold;">Total Expenses</td>
-                <td></td>
-                <td class="text-right"><input type="text" class="text-right input" id="total_ex_c" placeholder="&#8377 0,00,000"></td>
-                <td class="text-right"><input type="text" class="text-right input" id="total_ex_d" placeholder="&#8377 0,00,000"></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold;">Total for all accounts</td>
-                <td></td>
-                <td class="text-right"><input type="text" class="text-right input" id="total_c" placeholder="&#8377 0,00,000"></td>
-                <td class="text-right"><input type="text" class="text-right input" id="total_d" placeholder="&#8377 0,00,000"></td>
-              </tr>
-                            </tbody>
-                          </table>
-                        
-                        <div id="terms">
-                          <h5>Terms</h5>
-                          <textarea>NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days.</textarea>
-                       
-                </div>
-            </div>
-            <button id="button" >Generate PDF</button>
-            </div>
-            </div>
-        </div>
-
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script>
-       document.getElementById("button").addEventListener("click",function(){
-        const element = document.getElementById("invoice");
-        html2pdf().from(element).save();
-       });
-      
-    
-        </script>
-
-    </body>
->>>>>>> d14f11e101430bf386f8c29392c5760448351cdd
 </html>
